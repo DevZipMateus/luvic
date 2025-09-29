@@ -45,14 +45,19 @@ const Hero = () => {
             <img
               src={image}
               alt={`Produto ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
+              style={{
+                imageRendering: '-webkit-optimize-contrast',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)'
+              }}
             />
           </div>
         ))}
       </div>
       
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
       
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
