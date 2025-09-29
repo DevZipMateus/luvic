@@ -104,29 +104,29 @@ ${formData.message}`;
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6 px-4">
             Entre em contato conosco
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-muted-foreground text-base sm:text-lg max-w-3xl mx-auto px-4">
             Estamos prontos para atender você e oferecer as melhores soluções 
             para sua empresa. Entre em contato e vamos conversar sobre suas necessidades.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Form */}
           <Card className="shadow-elegant">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                 <Send className="h-5 w-5 text-primary" />
                 Envie sua mensagem
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Nome *</Label>
                     <Input
@@ -153,7 +153,7 @@ ${formData.message}`;
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Telefone</Label>
                     <Input
@@ -207,27 +207,27 @@ ${formData.message}`;
           <div className="space-y-6">
             <Card className="shadow-elegant">
               <CardHeader>
-                <CardTitle>Informações de contato</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Informações de contato</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 {contactInfo.map((contact, index) => (
                   <div key={index} className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
+                    <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
                       <contact.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">{contact.title}</h4>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">{contact.title}</h4>
                       {contact.link ? (
                         <a 
                           href={contact.link}
                           target={contact.link.startsWith('http') ? '_blank' : undefined}
                           rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                          className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm sm:text-base break-words"
                         >
                           {contact.info}
                         </a>
                       ) : (
-                        <p className="text-muted-foreground">{contact.info}</p>
+                        <p className="text-muted-foreground text-sm sm:text-base break-words">{contact.info}</p>
                       )}
                     </div>
                   </div>
@@ -237,21 +237,22 @@ ${formData.message}`;
 
             {/* Quick Contact */}
             <Card className="shadow-elegant bg-hero-gradient text-white">
-              <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-4">
+              <CardContent className="p-4 sm:p-6 text-center">
+                <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
                   Precisa de atendimento rápido?
                 </h3>
-                <p className="mb-6 text-white/90">
+                <p className="mb-4 sm:mb-6 text-white/90 text-sm sm:text-base">
                   Fale diretamente conosco pelo WhatsApp e receba atendimento imediato.
                 </p>
                 <a
                   href="https://wa.me/5519999523386"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="block"
                 >
                   <Button 
                     size="lg"
-                    className="bg-white/10 text-white border border-white/30 hover:bg-white hover:text-primary backdrop-blur-sm shadow-elegant"
+                    className="bg-white/10 text-white border border-white/30 hover:bg-white hover:text-primary backdrop-blur-sm shadow-elegant w-full sm:w-auto"
                   >
                     <Phone className="mr-2 h-4 w-4" />
                     Chamar no WhatsApp
