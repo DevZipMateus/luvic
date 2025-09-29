@@ -1,7 +1,24 @@
 import { Button } from '@/components/ui/button';
 import { ChevronRight, Phone, Mail } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import produto1 from '@/assets/produto-1.jpg';
+import produto2 from '@/assets/produto-2.jpg';
+import produto3 from '@/assets/produto-3.jpg';
 
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const backgroundImages = [produto1, produto2, produto3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -15,9 +32,27 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-hero-gradient">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background carousel */}
+      <div className="absolute inset-0">
+        {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image}
+              alt={`Produto ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+      
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-hero-overlay"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
       
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
