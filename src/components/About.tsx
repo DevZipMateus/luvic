@@ -38,44 +38,25 @@ const About = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
-            <div className="px-4 sm:px-0">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
-                Quem somos
-              </h3>
-              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                A Luvic Comercial é uma empresa especializada em fornecer soluções completas 
-                para a indústria alimentícia, com foco especial no setor de embutidos e produtos cárneos.
-              </p>
-              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                Nossa missão é levar soluções que agreguem valor aos nossos clientes, 
-                construindo parcerias sólidas baseadas em confiança e resultados. 
-                Trabalhamos com dedicação para oferecer produtos e serviços que 
-                garantem qualidade, padronização e inovação.
-              </p>
-              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
-                Com nossa expertise técnica e compromisso com a excelência, 
-                acompanhamos nossos parceiros em cada etapa do processo, 
-                garantindo o sucesso de seus projetos e produtos.
-              </p>
-            </div>
-
-            <div className="relative px-4 sm:px-0">
-              <Card className="shadow-elegant">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">15+</div>
-                    <p className="text-muted-foreground mb-4 text-sm sm:text-base">Anos de experiência</p>
-                    
-                    <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">500+</div>
-                    <p className="text-muted-foreground mb-4 text-sm sm:text-base">Clientes atendidos</p>
-                    
-                    <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">100%</div>
-                    <p className="text-muted-foreground text-sm sm:text-base">Compromisso com qualidade</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="max-w-3xl mx-auto mb-12 sm:mb-16 px-4 sm:px-0">
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6">
+              Quem somos
+            </h3>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              A Luvic Comercial é uma empresa especializada em fornecer soluções completas 
+              para a indústria alimentícia, com foco especial no setor de embutidos e produtos cárneos.
+            </p>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+              Nossa missão é levar soluções que agreguem valor aos nossos clientes, 
+              construindo parcerias sólidas baseadas em confiança e resultados. 
+              Trabalhamos com dedicação para oferecer produtos e serviços que 
+              garantem qualidade, padronização e inovação.
+            </p>
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+              Com nossa expertise técnica e compromisso com a excelência, 
+              acompanhamos nossos parceiros em cada etapa do processo, 
+              garantindo o sucesso de seus projetos e produtos.
+            </p>
           </div>
 
           {/* Values Grid */}
