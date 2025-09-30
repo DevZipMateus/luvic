@@ -15,6 +15,12 @@ const Services = () => {
   const services = [
     {
       icon: Beaker,
+      title: 'Tripas naturais e artificiais',
+      description: 'Fornecemos tripas naturais e artificiais de alta qualidade para produção de embutidos, garantindo resistência, elasticidade e segurança alimentar em seus produtos.',
+      features: ['Tripas naturais suínas e bovinas', 'Tripas artificiais colágeno', 'Tripas celulósicas', 'Qualidade certificada']
+    },
+    {
+      icon: Beaker,
       title: 'Condimentos e aditivos funcionais',
       description: 'Fornecemos condimentos especializados e aditivos funcionais que proporcionam estabilidade, rendimento e sabor diferenciado aos alimentos.',
       features: ['Estabilidade do produto', 'Melhoria no rendimento', 'Padronização do sabor', 'Conservação natural']
