@@ -17,7 +17,7 @@ const Services = () => {
       icon: Beaker,
       title: 'Tripas naturais e artificiais',
       description: 'Fornecemos tripas naturais e artificiais de alta qualidade para produção de embutidos, garantindo resistência, elasticidade e segurança alimentar em seus produtos.',
-      features: ['Tripas naturais suínas e bovinas', 'Tripas artificiais colágeno', 'Tripas celulósicas', 'Qualidade certificada']
+      features: ['Tripas suínas', 'Tripas ovinas', 'Tripas de colágeno']
     },
     {
       icon: Beaker,
